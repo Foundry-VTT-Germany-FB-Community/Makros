@@ -1,0 +1,8 @@
+const tokens = canvas.tokens.controlled;
+for (let i = 0; i < tokens.length; i++) {
+  const token = tokens[i];
+  token.data.name = token.name + ' ' + (i + 1);
+  token.data.displayName = 50;
+  token.nameplate.destroy(true);
+  token.nameplate = token.addChild(token._drawNameplate());
+}
